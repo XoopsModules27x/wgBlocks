@@ -33,9 +33,9 @@ trait VersionChecks
         }
         $moduleDirName      = (string)$module->getVar('dirname');
         $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
-        $errorConstant      = '_CO_MTOOLS_ERROR_BAD_XOOPS';
+        $errorConstant      = '_CO_WGBLOCKS_ERROR_BAD_XOOPS';
         if (!defined($errorConstant)) {
-            $errorConstant = 'CO_MTOOLS_ERROR_BAD_XOOPS';
+            $errorConstant = 'CO_WGBLOCKS_ERROR_BAD_XOOPS';
         }
         \xoops_loadLanguage('admin', $moduleDirName);
         \xoops_loadLanguage('common', $moduleDirName);
@@ -69,9 +69,9 @@ trait VersionChecks
         }
         $moduleDirName      = (string)$module->getVar('dirname');
         $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
-        $errorConstant      = '_CO_MTOOLS_ERROR_BAD_PHP';
+        $errorConstant      = '_CO_WGBLOCKS_ERROR_BAD_PHP';
         if (!defined($errorConstant)) {
-            $errorConstant = 'CO_MTOOLS_ERROR_BAD_PHP';
+            $errorConstant = 'CO_WGBLOCKS_ERROR_BAD_PHP';
         }
         \xoops_loadLanguage('admin', $moduleDirName);
         \xoops_loadLanguage('common', $moduleDirName);
@@ -99,6 +99,6 @@ trait VersionChecks
             return strtolower($matches[1]);
         }
 
-        return 'mtools';
+        return 'wgblocks';
     }
 }

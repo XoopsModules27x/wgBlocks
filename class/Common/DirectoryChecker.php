@@ -13,7 +13,7 @@ namespace XoopsModules\Wgblocks\Common;
  */
 
 /**
- * Mtools module
+ * Wgblocks module
  *
  * @copyright       2000-2026 XOOPS Project (https://xoops.org)
  * @license         GNU GPL 2.0 or later (https://www.gnu.org/licenses/gpl-2.0.html)
@@ -186,7 +186,7 @@ class DirectoryChecker
 
     private static function message(string $suffix, string $fallback): string
     {
-        $constant = 'CO_MTOOLS_' . $suffix;
+        $constant = 'CO_WGBLOCKS_' . $suffix;
 
         return defined($constant) ? (string)constant($constant) : $fallback;
     }

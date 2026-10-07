@@ -34,42 +34,42 @@ trait ServerStats
         //        $query = $GLOBALS['xoopsDB']->query($sql);
         //        list($meta) = (($GLOBALS['xoopsDB']->isResultSet($query) && ($query instanceof \mysqli_result)) ? $GLOBALS['xoopsDB']->fetchRow($query) : false);
         $html .= '<fieldset>';
-        $html .= "<legend style='font-weight: bold; color: #900;'>" . \constant('_CO_MTOOLS_IMAGEINFO') . '</legend>';
+        $html .= "<legend style='font-weight: bold; color: #900;'>" . \constant('_CO_WGBLOCKS_IMAGEINFO') . '</legend>';
         $html .= "<div style='padding: 8px;'>";
-        //        $html .= '<div>' . constant('_CO_MTOOLS_METAVERSION') . $meta . "</div>";
+        //        $html .= '<div>' . constant('_CO_WGBLOCKS_METAVERSION') . $meta . "</div>";
         //        $html .= "<br>";
         //        $html .= "<br>";
-        $html .= '<div>' . \constant('_CO_MTOOLS_SPHPINI') . '</div>';
+        $html .= '<div>' . \constant('_CO_WGBLOCKS_SPHPINI') . '</div>';
         $html .= '<ul>';
 
         if (\function_exists('gd_info')) {
-            $html  .= '<li>' . \constant('_CO_MTOOLS_GDLIBSTATUS') . '<span style="color: #008000;">' . \constant('_CO_MTOOLS_GDON') . '</span>';
+            $html  .= '<li>' . \constant('_CO_WGBLOCKS_GDLIBSTATUS') . '<span style="color: #008000;">' . \constant('_CO_WGBLOCKS_GDON') . '</span>';
             $gdlib = \gd_info();
             if (!empty(($gdlib))) {
-                $html .= '<li>' . \constant('_CO_MTOOLS_GDLIBVERSION') . '<b>' . $gdlib['GD Version'] . '</b>';
+                $html .= '<li>' . \constant('_CO_WGBLOCKS_GDLIBVERSION') . '<b>' . $gdlib['GD Version'] . '</b>';
             }
         } else {
-            $html .= '<li>' . \constant('_CO_MTOOLS_GDLIBSTATUS') . '<span style="color: #ff0000;">' . \constant('_CO_MTOOLS_GDOFF') . '</span>';
+            $html .= '<li>' . \constant('_CO_WGBLOCKS_GDLIBSTATUS') . '<span style="color: #ff0000;">' . \constant('_CO_WGBLOCKS_GDOFF') . '</span>';
         }
 
-        //    $safemode = ini_get('safe_mode') ? constant('_CO_MTOOLS_ON') . constant('_CO_MTOOLS_SAFEMODEPROBLEMS : constant('_CO_MTOOLS_OFF');
-        //    $html .= '<li>' . constant('_CO_MTOOLS_SAFEMODESTATUS . $safemode;
+        //    $safemode = ini_get('safe_mode') ? constant('_CO_WGBLOCKS_ON') . constant('_CO_WGBLOCKS_SAFEMODEPROBLEMS : constant('_CO_WGBLOCKS_OFF');
+        //    $html .= '<li>' . constant('_CO_WGBLOCKS_SAFEMODESTATUS . $safemode;
 
-        //    $registerglobals = (!ini_get('register_globals')) ? "<span style=\"color: #008000;\">" . constant('_CO_MTOOLS_OFF') . '</span>' : "<span style=\"color: #ff0000;\">" . constant('_CO_MTOOLS_ON') . '</span>';
-        //    $html .= '<li>' . constant('_CO_MTOOLS_REGISTERGLOBALS . $registerglobals;
+        //    $registerglobals = (!ini_get('register_globals')) ? "<span style=\"color: #008000;\">" . constant('_CO_WGBLOCKS_OFF') . '</span>' : "<span style=\"color: #ff0000;\">" . constant('_CO_WGBLOCKS_ON') . '</span>';
+        //    $html .= '<li>' . constant('_CO_WGBLOCKS_REGISTERGLOBALS . $registerglobals;
 
-        $downloads = \ini_get('file_uploads') ? '<span style="color: #008000;">' . \constant('_CO_MTOOLS_ON') . '</span>' : '<span style="color: #ff0000;">' . \constant('_CO_MTOOLS_OFF') . '</span>';
-        $html      .= '<li>' . \constant('_CO_MTOOLS_' . 'SERVERUPLOADSTATUS') . $downloads;
+        $downloads = \ini_get('file_uploads') ? '<span style="color: #008000;">' . \constant('_CO_WGBLOCKS_ON') . '</span>' : '<span style="color: #ff0000;">' . \constant('_CO_WGBLOCKS_OFF') . '</span>';
+        $html      .= '<li>' . \constant('_CO_WGBLOCKS_' . 'SERVERUPLOADSTATUS') . $downloads;
 
-        $html .= '<li>' . \constant('_CO_MTOOLS_' . 'MAXUPLOADSIZE') . ' <b><span style="color: #0000ff;">' . \ini_get('upload_max_filesize') . '</span></b>';
-        $html .= '<li>' . \constant('_CO_MTOOLS_' . 'MAXPOSTSIZE') . ' <b><span style="color: #0000ff;">' . \ini_get('post_max_size') . '</span></b>';
-        $html .= '<li>' . \constant('_CO_MTOOLS_' . 'MEMORYLIMIT') . ' <b><span style="color: #0000ff;">' . \ini_get('memory_limit') . '</span></b>';
+        $html .= '<li>' . \constant('_CO_WGBLOCKS_' . 'MAXUPLOADSIZE') . ' <b><span style="color: #0000ff;">' . \ini_get('upload_max_filesize') . '</span></b>';
+        $html .= '<li>' . \constant('_CO_WGBLOCKS_' . 'MAXPOSTSIZE') . ' <b><span style="color: #0000ff;">' . \ini_get('post_max_size') . '</span></b>';
+        $html .= '<li>' . \constant('_CO_WGBLOCKS_' . 'MEMORYLIMIT') . ' <b><span style="color: #0000ff;">' . \ini_get('memory_limit') . '</span></b>';
         $html .= '</ul>';
         $html .= '<ul>';
-        $html .= '<li>' . \constant('_CO_MTOOLS_' . 'SERVERPATH') . ' <b>' . XOOPS_ROOT_PATH . '</b>';
+        $html .= '<li>' . \constant('_CO_WGBLOCKS_' . 'SERVERPATH') . ' <b>' . XOOPS_ROOT_PATH . '</b>';
         $html .= '</ul>';
         $html .= '<br>';
-        $html .= \constant('_CO_MTOOLS_' . 'UPLOADPATHDSC') . '';
+        $html .= \constant('_CO_WGBLOCKS_' . 'UPLOADPATHDSC') . '';
         $html .= '</div>';
         $html .= '</fieldset><br>';
 
@@ -85,6 +85,6 @@ trait ServerStats
 
         return isset($GLOBALS['xoopsModule']) && $GLOBALS['xoopsModule'] instanceof \XoopsModule
             ? (string)$GLOBALS['xoopsModule']->getVar('dirname')
-            : 'mtools';
+            : 'wgblocks';
     }
 }

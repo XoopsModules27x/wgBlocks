@@ -140,7 +140,7 @@ class ModuleFeedback extends \XoopsObject
 
     private function constantValue(string $moduleDirNameUpper, string $suffix, string $fallback): string
     {
-        $constant = '_CO_MTOOLS_' . $suffix;
+        $constant = '_CO_WGBLOCKS_' . $suffix;
 
         return \defined($constant) ? (string)\constant($constant) : $fallback;
     }
