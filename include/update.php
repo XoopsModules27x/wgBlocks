@@ -76,6 +76,13 @@ function xoops_module_update_wgblocks($module)
     if (!empty($errors)) {
         \print_r($errors);
     }
+    // remove temporary files again
+    if (file_exists($fileYaml)) {
+        unlink($fileYaml);
+    }
+    if (file_exists($fileYaml2)) {
+        unlink($fileYaml2);
+    }
 
     return $ret;
 

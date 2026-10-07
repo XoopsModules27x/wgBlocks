@@ -40,7 +40,7 @@ $adminObject->addInfoBoxLine(\sprintf( '<label>' . \_AM_WGBLOCKS_THEREARE_ITEMS 
 // Upload Folders
 $folder = [];
 $configurator = new Common\Configurator();
-if ($configurator->uploadFolders && \is_array($configurator->uploadFolders)) {
+if ($configurator->uploadFolders) {
     foreach (\array_keys($configurator->uploadFolders) as $i) {
         $folder[] = $configurator->uploadFolders[$i];
     }
