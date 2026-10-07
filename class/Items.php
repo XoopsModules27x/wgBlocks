@@ -73,7 +73,7 @@ class Items extends \XoopsObject
 
     /**
      * The new inserted $Id
-     * @return inserted id
+     * @return integer id
      */
     public function getNewInsertedIdItems()
     {

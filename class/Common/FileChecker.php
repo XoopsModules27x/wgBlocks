@@ -13,7 +13,7 @@ namespace XoopsModules\Wgblocks\Common;
  */
 
 /**
- * wgBlocks module
+ * Mtools module
  *
  * @copyright       2000-2026 XOOPS Project (https://xoops.org)
  * @license         GNU GPL 2.0 or later (https://www.gnu.org/licenses/gpl-2.0.html)
@@ -27,12 +27,12 @@ namespace XoopsModules\Wgblocks\Common;
 class FileChecker
 {
     /**
-     * @param string $file_path
+     * @param string      $file_path
      * @param string|null $original_file_path
      * @param string|null $redirectFile
      * @return bool|string
      */
-    public static function getFileStatus(string $file_path, string $original_file_path = null, string $redirectFile = null)
+    public static function getFileStatus($file_path, $original_file_path = null, $redirectFile = null)
     {
         global $pathIcon16;
 
@@ -116,7 +116,7 @@ class FileChecker
      * @param string|null $allowedBasePath
      * @return bool
      */
-    public static function setFilePermissions($target, int $mode = 0644, ?string $allowedBasePath = null): bool
+    public static function setFilePermissions($target, $mode = 0644, ?string $allowedBasePath = null): bool
     {
         if (!self::isAllowedPath((string)$target, $allowedBasePath)) {
             return false;
@@ -199,7 +199,7 @@ class FileChecker
 
     private static function message(string $suffix, string $fallback): string
     {
-        $constant = 'CO_WGBLOCKS_' . $suffix;
+        $constant = 'CO_MTOOLS_' . $suffix;
 
         return defined($constant) ? (string)constant($constant) : $fallback;
     }

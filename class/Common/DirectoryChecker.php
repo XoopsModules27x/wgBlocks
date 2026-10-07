@@ -13,7 +13,7 @@ namespace XoopsModules\Wgblocks\Common;
  */
 
 /**
- * wgBlocks module
+ * Mtools module
  *
  * @copyright       2000-2026 XOOPS Project (https://xoops.org)
  * @license         GNU GPL 2.0 or later (https://www.gnu.org/licenses/gpl-2.0.html)
@@ -73,6 +73,8 @@ class DirectoryChecker
     /**
      * @param     $target
      * @param int $mode
+     * @param string|null $allowedBasePath
+     * @return bool
      */
     public static function createDirectory($target, $mode = 0755, ?string $allowedBasePath = null): bool
     {
@@ -89,6 +91,8 @@ class DirectoryChecker
     /**
      * @param     $target
      * @param int $mode
+     * @param string|null $allowedBasePath
+     * @return bool
      */
     public static function setDirectoryPermissions($target, $mode = 0755, ?string $allowedBasePath = null): bool
     {
@@ -101,6 +105,7 @@ class DirectoryChecker
 
     /**
      * @param   $dir_path
+     * @return bool
      */
     public static function dirExists($dir_path): bool
     {
@@ -181,7 +186,7 @@ class DirectoryChecker
 
     private static function message(string $suffix, string $fallback): string
     {
-        $constant = '_CO_WGBLOCKS_' . $suffix;
+        $constant = 'CO_MTOOLS_' . $suffix;
 
         return defined($constant) ? (string)constant($constant) : $fallback;
     }
