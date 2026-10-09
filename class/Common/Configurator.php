@@ -86,7 +86,7 @@ class Configurator
         $this->oldFiles        = (array)$config->oldFiles;
         $this->oldFolders      = (array)$config->oldFolders;
         $this->renameTables    = (array)$config->renameTables;
-        $this->renameColumns   = (array)$config->renameColumns;
+        $this->renameColumns   = (array)($config->renameColumns ?? []);
         $this->moduleStats     = (array)$config->moduleStats;
         $this->modCopyright    = (string)$config->modCopyright;
 
