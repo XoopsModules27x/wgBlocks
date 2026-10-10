@@ -77,10 +77,10 @@ class Configurator
             );
         }
 
-        $this->name            = (string)$config->name;
+        $this->name = (string)$config->name;
         // $this->paths           = $config->paths;
-        $this->uploadFolders   = (array)$config->uploadFolders;
-        $this->copyBlankFiles  = (array)$config->copyBlankFiles;
+        $this->uploadFolders = (array)$config->uploadFolders;
+        $this->copyBlankFiles = (array)$config->copyBlankFiles;
         $this->copyTestFolders = (array)$config->copyTestFolders;
         $this->templateFolders = (array)$config->templateFolders;
         $this->oldFiles        = (array)$config->oldFiles;
