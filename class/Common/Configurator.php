@@ -77,18 +77,18 @@ class Configurator
             );
         }
 
-        $this->name            = (string)$config->name;
+        $this->name = (string)$config->name;
         // $this->paths           = $config->paths;
-        $this->uploadFolders   = (array)$config->uploadFolders;
-        $this->copyBlankFiles  = (array)$config->copyBlankFiles;
+        $this->uploadFolders = (array)$config->uploadFolders;
+        $this->copyBlankFiles = (array)$config->copyBlankFiles;
         $this->copyTestFolders = (array)$config->copyTestFolders;
         $this->templateFolders = (array)$config->templateFolders;
-        $this->oldFiles        = (array)$config->oldFiles;
-        $this->oldFolders      = (array)$config->oldFolders;
-        $this->renameTables    = (array)$config->renameTables;
-        $this->renameColumns   = (array)$config->renameColumns;
-        $this->moduleStats     = (array)$config->moduleStats;
-        $this->modCopyright    = (string)$config->modCopyright;
+        $this->oldFiles = (array)$config->oldFiles;
+        $this->oldFolders = (array)$config->oldFolders;
+        $this->renameTables = (array)$config->renameTables;
+        $this->renameColumns = (array)($config->renameColumns ?? []);
+        $this->moduleStats = (array)$config->moduleStats;
+        $this->modCopyright = (string)$config->modCopyright;
 
         $iconsFile = $this->baseDir . '/config/icons.php';
         $pathsFile = $this->baseDir . '/config/paths.php';

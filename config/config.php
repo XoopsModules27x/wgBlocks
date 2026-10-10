@@ -57,6 +57,8 @@ return (object)[
     ],
     'renameTables'  => [
     ],
+    'renameColumns'  => [
+    ],
     'moduleStats'  => [
     ],
     'modCopyright' => "<a href='https://xoops.weddega.com' title='XOOPS Project on Wedega' target='_blank'><img src='" . \XOOPS_ROOT_PATH . '/modules/' . $moduleDirName . "/assets/images/logo/logoModule.png' alt='XOOPS Project'></a>",
